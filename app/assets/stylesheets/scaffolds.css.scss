@@ -248,13 +248,13 @@ buttons {
 	border-radius:6px;
 	border:1px solid #dcdcdc;
 	display:inline-block;
-	color:#000;
+	color:#565656;
 	font-family:Lobster;
-	font-size:23px;
+	font-size: 18px;
 	font-weight:normal;
 	padding:6px 24px;
 	text-decoration:none;
-	width: 480px;
+	width: 380px;
 }.button:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e7e7e7), color-stop(1, #ededed) );
 	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
