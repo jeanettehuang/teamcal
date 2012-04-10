@@ -7,6 +7,9 @@ class FreeTimesController < ApplicationController
     @week3 = Hour.find(:all, :order => 'id', :conditions => ["numberbusy = '0' AND weeknumber = '3'"])
     @week4 = Hour.find(:all, :order => 'id', :conditions => ["numberbusy = '0' AND weeknumber = '4'"])
     
+    @first = Hour.find(:first, :order => 'id', :conditions => ["numberbusy = '0'"])
+  
+    
      @sunday1 = Hour.find(:all, :order => 'id', :conditions => ["numberbusy = '0' AND id >= '1' AND id <= '16'"])
     @monday1 = Hour.find(:all, :order => 'id', :conditions => ["numberbusy = '0' AND id >= '17' AND id <= '32'"])
     @tuesday1 = Hour.find(:all, :order => 'id', :conditions => ["numberbusy = '0' AND id >= '33' AND id <= '48'"])
