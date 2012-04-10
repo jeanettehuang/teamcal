@@ -5,7 +5,7 @@ Calendar2::Application.routes.draw do
 
   resources :users
   
-  resources :firstfree
+  resources :first_free
 
   get "home/index"
 

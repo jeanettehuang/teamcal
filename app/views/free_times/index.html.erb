@@ -43,21 +43,23 @@
   </script>
 
 
-<center>
-	<table>
-<div class = "undertitle2">The Next Time Your Group Is Available to Meet is:</div>
-		<% @order.take(1).each do |hour| %>
-			<h2><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h2>
-		<% end %>
-	</table>
-	</center><br><br>
-	
-
 
 
 
 <center><h4>Group Meeting Availability</h4><br><br>
-	<div class="undertitle2">Click on each week to expand the available meeting times</div><br><br>
+	
+	<center>
+		<table>
+	<div class = "undertitle2">The Next Time Your Group Is Available to Meet is:</div>
+			<% @order.take(1).each do |hour| %>
+				<h2><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h2>
+			<% end %>
+		</table>
+		</center><br><br>
+		
+			<div class="undertitle2">Click on each week to expand all of the available meeting times</div><br><br>
+
+	
 
 <table>	
 	<buttons class = "week1_click">↓ Week of 4/1-4/7</buttons><br>

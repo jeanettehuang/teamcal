@@ -1,0 +1,28 @@
+<div id="header">
+          <div class="nav">
+<asdf><img src="http://i43.tinypic.com/j7xlyv.png"></asdf>
+               <p> TeamCal &nbsp; &nbsp; &nbsp; &nbsp;<%= link_to "home", root_path %> &nbsp; <%= link_to "users", users_path %> &nbsp; <%= link_to "calendar", events_path %> &nbsp; <%= link_to "availability", free_times_path %> &nbsp; <%= link_to '←Back', :back %></p>
+          </div>
+     </div>
+</br></br></br>
+
+
+	
+
+
+
+
+<center><h4>Group Meeting Availability</h4><br><br>
+	
+	<center>
+		<table>
+	<div class = "undertitle2">The Next Time Your Group Is Available to Meet is:</div>
+			<% @order.take(1).each do |hour| %>
+				<h2><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h2>
+			<% end %>
+		</table>
+		</center><br><br>
+		
+		
+		<center><%= link_to 'View All Available Meeting Times', free_times_path %></center>
+		
