@@ -1,13 +1,11 @@
 class FreeTimesController < ApplicationController
   def index
     @hours = Hour.find_all_by_numberbusy(0)
-    @order = Hour.find(:all, :order => 'id', :conditions => ["numberbusy = '0'"])
+    @order = Hour.find(:all, :order => 'id', :conditions => ['numberbusy = ? AND time >= ?', 0, DateTime.now])
     @week1 = Hour.find(:all, :order => 'id', :conditions => ["numberbusy = '0' AND weeknumber = '1'"])
     @week2 = Hour.find(:all, :order => 'id', :conditions => ["numberbusy = '0' AND weeknumber = '2'"])
     @week3 = Hour.find(:all, :order => 'id', :conditions => ["numberbusy = '0' AND weeknumber = '3'"])
     @week4 = Hour.find(:all, :order => 'id', :conditions => ["numberbusy = '0' AND weeknumber = '4'"])
-    
-    @first = Hour.find(:first, :order => 'id', :conditions => ["numberbusy = '0'"])
   
     
      @sunday1 = Hour.find(:all, :order => 'id', :conditions => ["numberbusy = '0' AND id >= '1' AND id <= '16'"])
