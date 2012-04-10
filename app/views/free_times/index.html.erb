@@ -15,7 +15,7 @@
   <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script>
     $(document).ready(function(){
-      $("h2.week1_click").click(function(event){
+      $("buttons.week1_click").click(function(event){
         $("h5.week1_hide").toggle();
         $("h2.week1_hide").toggle();
 		$("h6.br1").toggle();
@@ -23,7 +23,7 @@
       });
     });
     $(document).ready(function(){
-      $("h2.week2_click").click(function(event){
+      $("buttons.week2_click").click(function(event){
         $("h5.week2_hide").toggle();
         $("h2.week2_hide").toggle();
 		$("h6.br2").toggle();
@@ -31,7 +31,7 @@
       });
     });
 	$(document).ready(function(){
-      $("h2.week3_click").click(function(event){
+      $("buttons.week3_click").click(function(event){
         $("h5.week3_hide").toggle();
         $("h2.week3_hide").toggle();
 		$("h6.br3").toggle();
@@ -39,7 +39,7 @@
       });
     });
 	$(document).ready(function(){
-      $("h2.week4_click").click(function(event){
+      $("buttons.week4_click").click(function(event){
         $("h5.week4_hide").toggle();
         $("h2.week4_hide").toggle();
 		$("h6.br4").toggle();
@@ -54,10 +54,10 @@
 	<h3>Click on each week to expand</h3><br><br>
 
 <table>	
-	<h2 class = "week1_click">Available meeting times for the week of 4/1-4/7</h2><br>
+	<buttons class = "week1_click">→ Available meeting times for the week of 4/1-4/7</buttons><br>
 
 		<table>
-			<h2 class = "week1_hide" style="display: none;">Sunday:</h2><h6 class = "br1" style="display:none;"/></h6>
+		<h6 class = "br1" style="display:none;"/></h6>	<h2 class = "week1_hide" style="display: none;">Sunday:</h2><h6 class = "br1" style="display:none;"/></h6>
 			<% @sunday1.each do |hour| %>
 				<h5 class = "week1_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
 			<% end %>
@@ -111,9 +111,9 @@
 
 
 <table>
-	<h2 class = "week2_click">Available meeting times for the week of 4/8-4/14</h2><br>
+	<buttons class = "week2_click">→ Available meeting times for the week of 4/8-4/14</buttons><br>
 	<table>
-		<h2 class = "week2_hide" style="display:none;">Sunday:</h2><h6 class = "br2" style="display:none;"/></h6>
+		<h6 class = "br2" style="display:none;"/></h6><h2 class = "week2_hide" style="display:none;">Sunday:</h2><h6 class = "br2" style="display:none;"/></h6>
 		<% @sunday2.each do |hour| %>
 			<h5 class = "week2_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
 		<% end %>
@@ -167,7 +167,7 @@
 
 
 <table>
-	<h2 class = "week3_click">Available meeting times for the week of 4/15-4/21</h2>
+	<buttons class = "week3_click">→ Available meeting times for the week of 4/15-4/21</buttons>
 
 	<table>
 		<h6 class = "br3" style="display:none;"/></h6><h2 class = "week3_hide" style="display:none;">Sunday:</h2><h6 class = "br3" style="display:none;"/></h6>
@@ -220,13 +220,13 @@
 
 </table>
 <br>
-<br>
+
 
 <table>
-	<h2 class = "week4_click">Available meeting times for the week of 4/22-4/28</h2><br>
+	<buttons class = "week4_click">→ Available meeting times for the week of 4/22-4/28</button><br>
 	
 	<table>
-		<h2 class = "week4_hide" style="display:none;">Sunday:</h2><h6 class = "br4" style="display:none;"/></h6>
+		<h6 class = "br4" style="display:none;"/></h6><h2 class = "week4_hide" style="display:none;">Sunday:</h2><h6 class = "br4" style="display:none;"/></h6>
 		<% @sunday4.each do |hour| %>
 			<h5 class = "week4_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
 		<% end %>
