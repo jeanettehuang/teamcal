@@ -4,8 +4,6 @@ Calendar2::Application.routes.draw do
   resources :events
 
   resources :users
-  
-  resources :week1
 
   get "home/index"
 
