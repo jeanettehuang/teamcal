@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  endtime: 2012-04-02 23:51:04
+  repeat: false
+  daily: false
+  weekly: false
+  monthly: false
+
+two:
+  title: MyString
+  endtime: 2012-04-02 23:51:04
+  repeat: false
+  daily: false
+  weekly: false
+  monthly: false

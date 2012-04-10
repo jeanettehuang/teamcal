@@ -1,0 +1,2 @@
+<%= link_to "", posts_path %> </br>
+<%= link_to "My Blog", posts_path %>

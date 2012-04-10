@@ -1,0 +1,8 @@
+<h1>User Free Times</h1>
+<table>
+	<% @hours.each do |hour| %>
+		<tr>
+			<th> <%= hour.numberbusy %> </th>
+		</tr>
+	<% end %>
+</table>

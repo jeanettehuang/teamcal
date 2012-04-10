@@ -1,0 +1,23 @@
+<div id="header">
+          <div class="nav">
+<asdf><img src="http://i43.tinypic.com/j7xlyv.png"></asdf>
+               <p> TeamCal &nbsp; &nbsp; &nbsp; &nbsp;<%= link_to "home", root_path %> &nbsp; <%= link_to "users", users_path %> &nbsp; <%= link_to "calendar", events_path %> &nbsp; <%= link_to "availability", free_times_path %> &nbsp; <%= link_to '←Back', :back %></p>
+          </div>
+     </div>
+</br></br></br>
+
+<%= javascript_include_tag "application" %>
+
+<a href="#" onclick="toggle_visibility('foo');">Click here to toggle visibility of element #foo</a>
+<div id="foo">This is foo</div>
+
+<center><h4>Group Meeting Availability</h4><br><br>
+<table>
+	<h2>Available meeting times for the week of 4/1-4/7</h2><br>
+	<% @week1.each do |hour| %>
+		<h3><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+	<% end %>
+</table>
+<br><br>
+
+</center>

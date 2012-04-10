@@ -1,0 +1,272 @@
+<div id="header">
+          <div class="nav">
+<asdf><img src="http://i43.tinypic.com/j7xlyv.png"></asdf>
+               <p> TeamCal &nbsp; &nbsp; &nbsp; &nbsp;<%= link_to "home", root_path %> &nbsp; <%= link_to "users", users_path %> &nbsp; <%= link_to "calendar", events_path %> &nbsp; <%= link_to "availability", free_times_path %> &nbsp; <%= link_to '←Back', :back %></p>
+          </div>
+     </div>
+</br></br></br>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery demo</title>
+</head>
+<body>
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $("h2.week1_click").click(function(event){
+        $("h5.week1_hide").toggle();
+        $("h2.week1_hide").toggle();
+        event.preventDefault();
+      });
+    });
+    $(document).ready(function(){
+      $("h2.week2_click").click(function(event){
+        $("h5.week2_hide").toggle();
+        $("h2.week2_hide").toggle();
+        event.preventDefault();
+      });
+    });
+	$(document).ready(function(){
+      $("h2.week3_click").click(function(event){
+        $("h5.week3_hide").toggle();
+        $("h2.week3_hide").toggle();
+        event.preventDefault();
+      });
+    });
+	$(document).ready(function(){
+      $("h2.week4_click").click(function(event){
+        $("h5.week4_hide").toggle();
+        $("h2.week4_hide").toggle();
+        event.preventDefault();
+      });
+    });
+  </script>
+</body>
+</html>
+
+<center><h4>Group Meeting Availability</h4><br>
+	<h3>Click on each week to expand</h3><br><br>
+
+<table>
+	<h2 class = "week1_click">Available meeting times for the week of 4/1-4/7</h2><br>
+	<table>
+		<h2 class = "week1_hide" style="display:none;">Sunday:</h2><br>
+		<% @sunday1.each do |hour| %>
+			<h5 class = "week1_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br>
+	<table>
+		<h2 class = "week1_hide" style="display:none;">Monday:</h2><br>
+		<% @monday1.each do |mon| %>
+			<h5 class = "week1_hide"><%= mon.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week1_hide" style="display:none;">Tuesday:</h2><br>
+		<% @tuesday1.each do |hour| %>
+			<h5 class = "week1_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week1_hide" style="display:none;">Wednesday:</h2><br>
+		<% @wednesday1.each do |hour| %>
+			<h5 class = "week1_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week1_hide" style="display:none;">Thursday:</h2><br>
+		<% @thursday1.each do |hour| %>
+			<h5 class = "week1_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week1_hide" style="display:none;">Friday:</h2><br>
+		<% @friday1.each do |hour| %>
+			<h5 class = "week1_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week1_hide" style="display:none;">Saturday:</h2><br>
+		<% @saturday1.each do |hour| %>
+			<h5 class = "week1_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+</table>
+<br><br>
+
+
+
+<table>
+	<h2 class = "week2_click">Available meeting times for the week of 4/8-4/14</h2><br>
+	<table>
+		<h2 class = "week2_hide" style="display:none;">Sunday:</h2><br>
+		<% @sunday2.each do |hour| %>
+			<h5 class = "week2_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br>
+	<table>
+		<h2 class = "week2_hide" style="display:none;">Monday:</h2><br>
+		<% @monday2.each do |mon| %>
+			<h5 class = "week2_hide"><%= mon.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week2_hide" style="display:none;">Tuesday:</h2><br>
+		<% @tuesday2.each do |hour| %>
+			<h5 class = "week2_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week2_hide" style="display:none;">Wednesday:</h2><br>
+		<% @wednesday2.each do |hour| %>
+			<h5 class = "week2_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week2_hide" style="display:none;">Thursday:</h2><br>
+		<% @thursday2.each do |hour| %>
+			<h5 class = "week2_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week2_hide" style="display:none;">Friday:</h2><br>
+		<% @friday2.each do |hour| %>
+			<h5 class = "week2_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week2_hide" style="display:none;">Saturday:</h2><br>
+		<% @saturday2.each do |hour| %>
+			<h5 class = "week2_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+</table>
+<br><br>
+
+
+
+<table>
+	<h2 class = "week3_click">Available meeting times for the week of 4/15-4/21</h2><br>
+	<table>
+		<h2 class = "week3_hide" style="display:none;">Sunday:</h2><br>
+		<% @sunday3.each do |hour| %>
+			<h5 class = "week3_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br>
+	<table>
+		<h2 class = "week3_hide" style="display:none;">Monday:</h2><br>
+		<% @monday3.each do |mon| %>
+			<h5 class = "week3_hide"><%= mon.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week3_hide" style="display:none;">Tuesday:</h2><br>
+		<% @tuesday3.each do |hour| %>
+			<h5 class = "week3_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week3_hide" style="display:none;">Wednesday:</h2><br>
+		<% @wednesday3.each do |hour| %>
+			<h5 class = "week3_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week3_hide" style="display:none;">Thursday:</h2><br>
+		<% @thursday3.each do |hour| %>
+			<h5 class = "week3_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week3_hide" style="display:none;">Friday:</h2><br>
+		<% @friday3.each do |hour| %>
+			<h5 class = "week3_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week3_hide" style="display:none;">Saturday:</h2><br>
+		<% @saturday3.each do |hour| %>
+			<h5 class = "week3_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+</table>
+<br><br>
+
+
+
+<table>
+	<h2 class = "week4_click">Available meeting times for the week of 4/15-4/21</h2><br>
+	<table>
+		<h2 class = "week4_hide" style="display:none;">Sunday:</h2><br>
+		<% @sunday4.each do |hour| %>
+			<h5 class = "week4_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br>
+	<table>
+		<h2 class = "week4_hide" style="display:none;">Monday:</h2><br>
+		<% @monday4.each do |mon| %>
+			<h5 class = "week4_hide"><%= mon.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week4_hide" style="display:none;">Tuesday:</h2><br>
+		<% @tuesday4.each do |hour| %>
+			<h5 class = "week4_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week4_hide" style="display:none;">Wednesday:</h2><br>
+		<% @wednesday4.each do |hour| %>
+			<h5 class = "week4_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week4_hide" style="display:none;">Thursday:</h2><br>
+		<% @thursday4.each do |hour| %>
+			<h5 class = "week4_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week4_hide" style="display:none;">Friday:</h2><br>
+		<% @friday4.each do |hour| %>
+			<h5 class = "week4_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+	<br><br>
+	<table>
+		<h2 class = "week4_hide" style="display:none;">Saturday:</h2><br>
+		<% @saturday4.each do |hour| %>
+			<h5 class = "week4_hide"><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+		<% end %>
+	</table>
+</table>
+
+
+
+</center>

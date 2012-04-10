@@ -1,0 +1,26 @@
+// inherits from users.cs.scss
+
+table.events
+{
+	width: 90%;
+}
+
+table.events th
+{
+	width: auto;
+	padding: 8px 5px 8px 5px;
+	background: #9999FF;
+}
+
+table.events td
+{
+	height: 30px;
+	padding-left: 5px;
+	padding-right: 5px;
+	background: #CCCCFF;
+}
+
+table.events th.actions
+{
+	width: 5%;
+}

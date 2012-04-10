@@ -1,0 +1,26 @@
+<div id="header">
+          <div class="nav">
+<asdf><img src="http://i43.tinypic.com/j7xlyv.png"></asdf>
+               <p> TeamCal &nbsp; &nbsp; &nbsp; &nbsp;<%= link_to "home", root_path %> &nbsp; <%= link_to "users", users_path %> &nbsp; <%= link_to "calendar", events_path %> &nbsp; <%= link_to "availability", free_times_path %> &nbsp; <%= link_to '←Back', :back %></p>
+          </div>
+     </div>
+</br></br></br>
+
+<center><h1>List of Users</h1></center>
+
+<center><table>
+    <th><h2>User Name</h2><hr></th>
+
+</center><center>
+<% @users.each do |user| %>
+  <tr>
+    <td><h3><%= user.name %></h3></td>
+    <td><h3><%= link_to 'Edit', edit_user_path(user) %></h3></td>
+    <td><h3><%= link_to 'Remove', user, confirm: 'Are you sure?', method: :delete %></h3></td>
+  </tr>
+<% end %>
+</table></center>
+<br><br>
+<br />
+<center>
+<div class="button"><center><%= link_to '→ Add a New User', new_user_path %></center></button></center>

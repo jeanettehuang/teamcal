@@ -1,0 +1,214 @@
+@import 'header';
+.back {
+  font-family: $sans-font;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: $darkgreen;
+  width: 210px;
+  position: absolute;
+  left: 900px;
+  top: 60px;
+  display: inline-block;
+  margin-left: 10px;
+  height: 17px;
+  width: 45px;
+  @include border-radius(5px); 
+  @include single-box-shadow;
+  padding-top: 1px;
+  text-align: center;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.main-content {
+  display: block;
+  position: relative;
+  top: 30px;
+  left: 300px;
+  margin: 0 auto;
+  width: 80%;
+  font-family: $sans-font;
+  font-size: 0.9em;
+  color: $darkgrey;
+}
+
+.small-button2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: $darkgrey;
+  width: 210px;
+  display: inline-block;
+  margin-left: 10px;
+  height: 17px;
+  width: 45px;
+  @include border-radius(5px); 
+  @include single-box-shadow;
+  padding-top: 1px;
+  text-align: center;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.small-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: $darkgrey;
+  width: 120px;
+  display: inline-block;
+  margin-left: 10px;
+  height: 17px;
+  width: 45px;
+  @include border-radius(5px); 
+  @include single-box-shadow;
+  padding-top: 1px;
+  text-align: center;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+h4 {
+  width: 450px;
+  margin-bottom: 40px;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  color: $darkgrey;
+  margin-left: 20px;
+}
+
+.content {
+  display: block;
+  position: relative;
+  top: 50px;
+  margin: 0 auto;
+  width: 300px;
+  font-family: $sans-font;
+  font-size: 0.9em;
+  color: $darkgrey;
+
+  .intro {
+    width: 600px;
+    position: relative;
+    left: -108px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .blurb {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: $gotogrey;
+    span {
+      color: $darkgreen;
+      text-transform: uppercase;
+      size: 1.2em;
+    }
+  }
+
+  .actions {
+    padding-left: 20px;
+    .button {
+      display: block;
+      height: 23px;
+      width: 65%;
+      margin-bottom: 5px;
+      background: $darkgreen;
+      @include border-radius(5px); 
+      @include single-box-shadow;
+      text-align: center;
+      padding-top: 7px;
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+
+.submission {
+  margin-top: 20px;
+  border-top: 1px dotted $darkgrey;
+  width: 400px;
+}
+
+.title {
+  display: inline;
+  font-family: $serif-font;
+  text-transform: lowercase;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.rating {
+  img { width: 77px; }
+  position: relative;
+  top: 5px;
+  display: inline-block;
+}
+
+.company {
+  size: 1.2em;
+  display: inline;
+  font-family: $sans_font;
+  text-transform: uppercase;
+  size: 0.8em;
+}
+
+.woo {
+  position: absolute;
+  z-index: -1;
+  top: 132px;
+  img {
+    height: 320px;
+    width: 670px;
+  }
+  left: -82px;
+}
+
+.block {
+  display: block;
+  margin-bottom: 20px;
+  .title {
+    display: inline;
+    font-family: $serif-font;
+    text-transform: lowercase;
+    font-size: 1.6em;
+  }
+
+  .company {
+    size: 1em;
+    display: inline;
+    font-family: $sans_font;
+    text-transform: uppercase;
+    size: 0.8em;
+  }
+}
+
+h1 {
+  color: $darkgreen;
+  font-family: $serif-font;
+  font-size: 28px;
+  text-transform: lowercase;
+}
+
+h2 {
+  font-family: $second_serif_font;
+}
+
+h3 {
+  font-family: $sans-font;
+  size: 1.2em;
+}
+
+.wrapper {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  top: 30px;
+}

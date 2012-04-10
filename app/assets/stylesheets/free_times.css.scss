@@ -1,0 +1,15 @@
+// Place all the styles related to the FreeTimes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+table.free_times {
+	width: 30%;
+}
+
+table.free_times tr {
+	background: #CCCCFF;
+}
+
+table.free_times th {
+	width: 70%;
+}

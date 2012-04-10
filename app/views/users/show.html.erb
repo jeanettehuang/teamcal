@@ -1,0 +1,17 @@
+<div id="header">
+          <div class="nav">
+<asdf><img src="http://i43.tinypic.com/j7xlyv.png"></asdf>
+               <p> TeamCal &nbsp; &nbsp; &nbsp; &nbsp;<%= link_to "home", root_path %> &nbsp; <%= link_to "users", users_path %> &nbsp; <%= link_to "calendar", events_path %> &nbsp; <%= link_to "availability", free_times_path %> &nbsp; <%= link_to '←Back', :back %></p>
+          </div>
+     </div>
+</br></br></br>
+
+<p id="notice"><%= notice %></p>
+<center>
+<p>
+  <h2>User successfully saved!</h2>
+</p></center>
+
+<center>
+<%= link_to 'Edit ⎪', edit_user_path(@user) %> 
+<%= link_to 'Return to User List', users_path %></center>

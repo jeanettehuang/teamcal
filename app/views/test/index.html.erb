@@ -1,0 +1,45 @@
+<div id="header">
+          <div class="nav">
+<asdf><img src="http://i43.tinypic.com/j7xlyv.png"></asdf>
+               <p> TeamCal &nbsp; &nbsp; &nbsp; &nbsp;<%= link_to "home", root_path %> &nbsp; <%= link_to "users", users_path %> &nbsp; <%= link_to "calendar", events_path %> &nbsp; <%= link_to "availability", free_times_path %> &nbsp; <%= link_to '←Back', :back %></p>
+          </div>
+     </div>
+</br></br></br>
+
+<center><h4>Group Meeting Availability</h4><br><br>
+<table>
+	<h2>Available meeting times for the week of 4/1-4/7</h2><br>
+	<% @week1.each do |hour| %>
+		<h3><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+	<% end %>
+</table>
+<br><br>
+
+<table>
+	<h2>Available meeting times for the week of 4/8-4/14</h2><br>
+	<% @week2.each do |hour| %>
+		<h3><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+	<% end %>
+</table>
+<br><br>
+
+
+<table>
+	<h2>Available meeting times for the week of 4/15-4/21</h2><br>
+	<% @week3.each do |hour| %>
+		<h3><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+	<% end %>
+</table>
+<br><br>
+
+<table>
+	<h2>Available meeting times for the week of 4/22-4/28</h2><br>
+	<% @week4.each do |hour| %>
+		<h3><%= hour.time.strftime('%A %b %e, %Y at %l:%M %p') %> </h3>
+	<% end %>
+</table>
+<br><br>
+
+
+
+</center>

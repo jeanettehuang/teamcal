@@ -1,0 +1,25 @@
+<div id="header">
+          <div class="nav">
+<asdf><img src="http://i43.tinypic.com/j7xlyv.png"></asdf>
+               <p> TeamCal &nbsp; &nbsp; &nbsp; &nbsp;<%= link_to "home", root_path %> &nbsp; <%= link_to "users", users_path %> &nbsp; <%= link_to "calendar", events_path %> &nbsp; <%= link_to "availability", free_times_path %> &nbsp; <%= link_to '←Back', :back %></p>
+
+
+          </div>
+     </div>
+</br></br></br>
+
+
+
+<div class="title">
+<center><b>Welcome to TeamCal!</b></center>
+</div>
+<div class="undertitle">
+<center>a COLLABORATIVE environment for collaborative groups.</center><br><br>
+</div>
+<div class ="undertitle2">
+<center>Click the links below to get started!</center>
+</div>
+<br>
+<center><div class="button"><center><%= link_to "→ View All Users", users_path %></center></div><br><br>
+<div class="button"><center><%= link_to "→ Update The Calendar", events_path %></center></div><br><br>
+<div class="button"><center><%= link_to "→ View Group Availability", free_times_path %></center></div></center>

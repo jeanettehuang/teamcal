@@ -1,0 +1,29 @@
+<div id="header">
+          <div class="nav">
+<asdf><img src="http://i43.tinypic.com/j7xlyv.png"></asdf>
+               <p> TeamCal &nbsp; &nbsp; &nbsp; &nbsp;<%= link_to "home", root_path %> &nbsp; <%= link_to "users", users_path %> &nbsp; <%= link_to "calendar", events_path %> &nbsp; <%= link_to "availability", free_times_path %> &nbsp; <%= link_to '←Back', :back %></p>
+          </div>
+     </div>
+</br></br></br>
+
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <error><center><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved. You must enter in a user name.</center></error>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<center>
+  <div class="field">
+    <h2><%= f.label :name %></h2><br>
+    <%= f.text_field :name %><br>
+  </div><br><br>
+  <div class="actions">
+    <%= f.submit %>
+  </div></center>
+<% end %>

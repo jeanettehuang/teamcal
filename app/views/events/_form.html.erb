@@ -1,0 +1,53 @@
+<div id="header">
+          <div class="nav">
+<asdf><img src="http://i43.tinypic.com/j7xlyv.png"></asdf>
+               <p> TeamCal &nbsp; &nbsp; &nbsp; &nbsp;<%= link_to "home", root_path %> &nbsp; <%= link_to "users", users_path %> &nbsp; <%= link_to "calendar", events_path %> &nbsp; <%= link_to "availability", free_times_path %> &nbsp; <%= link_to '←Back', :back %></p>
+          </div>
+     </div>
+</br></br></br>
+
+<%= form_for(@event) do |f| %>
+
+
+<% if @event.errors.any? %>
+    <div id="error_explanation">
+      <error><center><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved. <br> Check that all fields are filled out and start time is before end time.</center></error>
+
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  
+<center>
+  <div class="field"><h3>
+    <%= f.label :title %>
+    <%= f.text_field :title %></h3>
+  </div><br>
+  <div class="field"><h3>
+    <%= f.label :starttime %>
+    <%= f.datetime_select :starttime %></h3>
+  </div><br>
+  <div class="field"><h3>
+    <%= f.label :endtime %>
+    <%= f.datetime_select :endtime %></h3>
+  </div><br>
+   </div><br><br>
+
+<h2>Which user does this new event belong to?</h2><br>
+  <% @users.each do |p| %>
+    <div class="field"><h3>
+      <%= f.radio_button :user_id, p.id %>
+      <%= f.label :user_id, p.name %></h3>
+    </div>
+  <% end %><br><br>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div></center>
+<% end %>
