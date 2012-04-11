@@ -355,5 +355,41 @@ error {
     margin-right: 25px;
     padding-top: 8px;
   }
-
 }
+
+ table.weeklytable{
+    display: none;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #888888;
+    text-align: center;
+    margin-top: 20px;
+    background: #EDEDED;
+    border: 1px solid black;
+    border-collapse:collapse;
+    color: #404040;
+
+    th {
+      font-family: lobster;
+      width: 40px;
+      border: 1px solid black;
+      border-collapse:collapse;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F8F8F8), color-stop(1, #C0C0C0))
+    }
+
+    td {
+      font-family: Lobster;
+      font-size: 1em;
+      border: 1px solid black;
+      border-collapse:collapse;
+      padding: 3px 5px 3px 5px;
+      color: #404040;
+    }
+
+    td.column1 {
+      color: #404040;
+      font-weight: bold;  
+      font-family: lobster;
+      font-size: 1em;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F8F8F8), color-stop(1, #C0C0C0))
+    }
+  }
